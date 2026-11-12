@@ -1,0 +1,35 @@
+QUESTION:
+Which typography styles from the design system were applied to the page heading (.brand-title), field labels (.field-label), and primary action button (.submit-btn) on the login screen?
+
+AGENT ANSWER:
+The login screen typography strictly maps to the 15-style typography tokens defined in tokens.css:
+
+1. Page Heading (.brand-title):
+   - Token Role: headline medium
+   - CSS Variables Used:
+     * font-family: var(--typography-headline-medium-font-family) -> 'Plus Jakarta Sans', sans-serif
+     * font-size: var(--typography-headline-medium-font-size) -> 28px
+     * font-weight: var(--typography-headline-medium-font-weight) -> 500
+     * line-height: var(--typography-headline-medium-line-height) -> 39.2px (size * 1.4)
+     * letter-spacing: var(--typography-headline-medium-letter-spacing) -> -1.4px
+
+2. Field Labels (.field-label):
+   - Token Role: label large
+   - CSS Variables Used:
+     * font-family: var(--typography-label-large-font-family) -> 'Geist', sans-serif
+     * font-size: var(--typography-label-large-font-size) -> 14px
+     * font-weight: var(--typography-label-large-font-weight) -> 500
+     * line-height: var(--typography-label-large-line-height) -> 21px (size * 1.5)
+     * letter-spacing: var(--typography-label-large-letter-spacing) -> 0.014px
+
+3. Primary Action Button (.submit-btn):
+   - Token Role: label large
+   - CSS Variables Used:
+     * font-family: var(--typography-label-large-font-family) -> 'Geist', sans-serif
+     * font-size: var(--typography-label-large-font-size) -> 14px
+     * font-weight: var(--typography-label-large-font-weight) -> 500
+     * line-height: var(--typography-label-large-line-height) -> 21px
+     * letter-spacing: var(--typography-label-large-letter-spacing) -> 0.014px
+
+No custom font properties or ad-hoc pixel overrides were injected.
+

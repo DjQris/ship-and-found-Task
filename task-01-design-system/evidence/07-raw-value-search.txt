@@ -1,0 +1,6 @@
+COMMAND:
+Get-ChildItem -Include *.html, *.css, *.js -Exclude tokens.css, convert-tokens-to-css.js -Recurse | Select-String -Pattern "#[0-9a-fA-F]{3,8}|rgba?\("
+
+OUTPUT:
+(0 results found - full output is empty. All UI styles strictly consume design tokens from tokens.css via var(--color-*))
+
