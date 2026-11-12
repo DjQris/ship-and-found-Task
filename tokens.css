@@ -29,15 +29,15 @@
      ------------------------------------------------------------------------ */
   /* Palette: primary */
   --primitive-primary-0: #000000;
-  --primitive-primary-10: #002110;
-  --primitive-primary-20: #00391f;
-  --primitive-primary-30: #05522f;
-  --primitive-primary-40: #286b46;
-  --primitive-primary-50: #42845d;
-  --primitive-primary-60: #5c9e75;
-  --primitive-primary-70: #76ba8e;
-  --primitive-primary-80: #91d5a8;
-  --primitive-primary-90: #acf2c3;
+  --primitive-primary-10: #001944;
+  --primitive-primary-20: #002e6b;
+  --primitive-primary-30: #004696;
+  --primitive-primary-40: #1a4d99; /* SOURCE BRAND COLOR CHANGED TO BLUE */
+  --primitive-primary-50: #3b6cb8;
+  --primitive-primary-60: #5887d7;
+  --primitive-primary-70: #76a3f7;
+  --primitive-primary-80: #99bfff;
+  --primitive-primary-90: #cfe1ff;
   --primitive-primary-95: #c1ffd4;
   --primitive-primary-98: #e9ffec;
   --primitive-primary-99: #f5fff4;
@@ -162,7 +162,7 @@
      2. SEMANTIC COLOR ROLES (SOURCE OF TRUTH FOR UI IMPLEMENTATION)
      Consume EXCLUSIVELY these variables across buttons, text, cards, borders.
      ======================================================================== */
-  --color-primary: var(--primitive-primary-40);
+  --color-primary: #ff0000; /* REGRESSION: Pointed at raw hex instead of var(--primitive-primary-40) */
   --color-on-primary: var(--primitive-primary-100);
   --color-primary-container: var(--primitive-primary-90);
   --color-on-primary-container: var(--primitive-primary-30);

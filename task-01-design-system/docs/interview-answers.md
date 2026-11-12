@@ -137,3 +137,4 @@ This approach exports raw primitive values without a **semantic role abstraction
 1. **Component Coupling**: Component stylesheets will be littered with `--green-500` on buttons, badges, borders, and icons. When stakeholders change the primary brand color to teal, you cannot simply update `--green-500` to `#008080` without introducing absurd semantic nonsense into the codebase.
 2. **Dark Mode Impossibility**: Because components reference a specific color rather than an intent (`--color-surface`, `--color-on-surface`), implementing dark mode requires manually rewriting every CSS selector across the application rather than flipping token aliases at the root.
 3. **Zero Governance**: Developers have no guidance on whether to use `--green-400`, `--green-500`, or `--green-600`, leading to visual drift and contrast regressions.
+

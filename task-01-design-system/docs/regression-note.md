@@ -1,3 +1,4 @@
 # The Deliberate Token Regression Defense
 
 When brand identity shifts at the source (here mutated from `#286B46` forest green to `#1A4D99` deep ocean blue), components maintaining proper token referencing automatically inherit the new corporate palette without touching application code. However, because `--color-primary` was pointed directly at a hardcoded hex literal (`#FF0000`), the primary action button remained stuck in garish red while its surrounding container accents, outlines, and badges updated to blue. This visual fracture proves the entire argument for design tokens: decoupling semantic roles from raw primitives guarantees that global rebranding propagates consistently across an entire enterprise surface with zero manual search-and-replace regressions.
+

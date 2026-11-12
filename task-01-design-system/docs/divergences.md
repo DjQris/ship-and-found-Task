@@ -33,3 +33,4 @@ This document records the deliberate divergences from the baseline Material Desi
 - **Dwella Decision**: -2.85px (-5.0% of font size) on `display large`.
 - **Why**: Plus Jakarta Sans is an expansive geometric sans-serif with wide internal counters. At 57px, default letter spacing causes the glyphs to appear disconnected and visually porous. Pulling the tracking in by 5% creates a dense, commanding display rhythm suited for landing page statements.
 - **Where this choice fails (The Trade-Off)**: On low-DPI Android smartphone displays lacking subpixel font smoothing, -5% tracking creates glyph clumping (e.g., `r` and `n` merging into `m`, or `c` and `l` reading as `d`). For elderly estate residents (aged 55–65) with diminished visual acuity, this induces eye fatigue and reading errors.
+

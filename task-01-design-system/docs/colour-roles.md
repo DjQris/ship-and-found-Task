@@ -69,3 +69,4 @@ Every pair planned for typography or actionable UI elements was evaluated agains
 
 ### Documented Exclusion:
 `outline-variant` on `surface` measures **1.63:1**. By design system policy, this token is strictly prohibited for typography, interactive element boundaries, or critical icons. It is reserved exclusively for passive card dividing rules and aesthetic section borders where contrast is not essential for comprehension or navigation.
+

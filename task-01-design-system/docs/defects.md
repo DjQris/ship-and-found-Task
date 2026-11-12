@@ -36,3 +36,4 @@ In accordance with assessment standards, this document names real, observed defe
 - **Line Reference**: Lines 103–115
 - **The Defect**: The login handler disables the button after click but lacks an `AbortController` and fails to debounce submission before network initiation.
 - **Production Cost**: Under intermittent mobile network latency in Abuja (e.g. 3G cell tower handover), users repeatedly tap the submit button. Even with client button disabling, network latency jitter can dispatch multiple authentication handshakes, triggering server-side 429 Too Many Requests rate-limit lockouts on resident accounts.
+
