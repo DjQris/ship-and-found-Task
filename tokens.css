@@ -1,0 +1,383 @@
+/* ==========================================================================
+   DESIGN SYSTEM TOKENS - DWELLA
+   Generated automatically from design-tokens.tokens.json
+   ==========================================================================
+   SYSTEM ARCHITECTURE:
+   1. Primitives (--primitive-*):
+      Internal foundational values (scales, palettes, raw colors).
+      CRITICAL: Never consume primitive tokens directly in application UI.
+   2. Semantic Roles (--color-*, --spacing-*, --radius-*, --typography-*):
+      Purpose-driven UI design tokens that map semantic intents to primitives.
+      CRITICAL: Always consume ONLY semantic roles in component stylesheets.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1A. Primitive Key Colors (Internal foundation - DO NOT USE ON UI)
+     ------------------------------------------------------------------------ */
+  --primitive-key-primary: #286b46;
+  --primitive-key-secondary: #4a6453;
+  --primitive-key-tertiary: #3e674e;
+  --primitive-key-neutral: #5a605c;
+  --primitive-key-neutral-variant: #566159;
+  --primitive-key-success: #008000;
+  --primitive-key-error: #ff0000;
+  --primitive-key-warning: #c87800;
+
+  /* ------------------------------------------------------------------------
+     1B. Primitive Tonal Palettes (Internal foundation - DO NOT USE ON UI)
+     ------------------------------------------------------------------------ */
+  /* Palette: primary */
+  --primitive-primary-0: #000000;
+  --primitive-primary-10: #002110;
+  --primitive-primary-20: #00391f;
+  --primitive-primary-30: #05522f;
+  --primitive-primary-40: #286b46;
+  --primitive-primary-50: #42845d;
+  --primitive-primary-60: #5c9e75;
+  --primitive-primary-70: #76ba8e;
+  --primitive-primary-80: #91d5a8;
+  --primitive-primary-90: #acf2c3;
+  --primitive-primary-95: #c1ffd4;
+  --primitive-primary-98: #e9ffec;
+  --primitive-primary-99: #f5fff4;
+  --primitive-primary-100: #ffffff;
+  /* Palette: secondary */
+  --primitive-secondary-0: #000000;
+  --primitive-secondary-10: #072013;
+  --primitive-secondary-20: #1d3527;
+  --primitive-secondary-30: #334c3c;
+  --primitive-secondary-40: #4a6453;
+  --primitive-secondary-50: #627d6b;
+  --primitive-secondary-60: #7c9784;
+  --primitive-secondary-70: #96b29e;
+  --primitive-secondary-80: #b1cdb9;
+  --primitive-secondary-90: #ccead4;
+  --primitive-secondary-95: #daf8e2;
+  --primitive-secondary-98: #e9ffed;
+  --primitive-secondary-99: #f5fff5;
+  --primitive-secondary-100: #ffffff;
+  /* Palette: tertiary */
+  --primitive-tertiary-0: #000000;
+  --primitive-tertiary-10: #002111;
+  --primitive-tertiary-20: #0d3822;
+  --primitive-tertiary-30: #264f37;
+  --primitive-tertiary-40: #3e674e;
+  --primitive-tertiary-50: #568066;
+  --primitive-tertiary-60: #709a7e;
+  --primitive-tertiary-70: #89b598;
+  --primitive-tertiary-80: #a4d1b2;
+  --primitive-tertiary-90: #c0edcd;
+  --primitive-tertiary-95: #cefcdb;
+  --primitive-tertiary-98: #e9ffed;
+  --primitive-tertiary-99: #f5fff4;
+  --primitive-tertiary-100: #ffffff;
+  /* Palette: neutral */
+  --primitive-neutral-0: #000000;
+  --primitive-neutral-10: #171d1a;
+  --primitive-neutral-20: #2c322e;
+  --primitive-neutral-30: #424844;
+  --primitive-neutral-40: #5a605c;
+  --primitive-neutral-50: #727874;
+  --primitive-neutral-60: #8c928e;
+  --primitive-neutral-70: #a7ada8;
+  --primitive-neutral-80: #c2c8c3;
+  --primitive-neutral-90: #dee4df;
+  --primitive-neutral-95: #edf2ed;
+  --primitive-neutral-98: #f5fbf5;
+  --primitive-neutral-99: #f8fef8;
+  --primitive-neutral-100: #ffffff;
+  --primitive-neutral-4: #0a0f0d;
+  --primitive-neutral-6: #0f1512;
+  --primitive-neutral-12: #1b211e;
+  --primitive-neutral-17: #252b28;
+  --primitive-neutral-22: #303633;
+  --primitive-neutral-24: #353b37;
+  --primitive-neutral-87: #d6dbd6;
+  --primitive-neutral-92: #e4eae4;
+  --primitive-neutral-94: #eaefea;
+  --primitive-neutral-96: #eff5f0;
+  /* Palette: neutral variant */
+  --primitive-neutral-variant-0: #000000;
+  --primitive-neutral-variant-10: #141e18;
+  --primitive-neutral-variant-20: #28332c;
+  --primitive-neutral-variant-30: #3f4942;
+  --primitive-neutral-variant-40: #566159;
+  --primitive-neutral-variant-50: #6f7a71;
+  --primitive-neutral-variant-60: #88948b;
+  --primitive-neutral-variant-70: #a3aea5;
+  --primitive-neutral-variant-80: #bec9c0;
+  --primitive-neutral-variant-90: #dae5db;
+  --primitive-neutral-variant-95: #e8f4e9;
+  --primitive-neutral-variant-98: #f1fcf2;
+  --primitive-neutral-variant-99: #f4fff5;
+  --primitive-neutral-variant-100: #ffffff;
+  /* Palette: success */
+  --primitive-success-0: #000000;
+  --primitive-success-10: #002200;
+  --primitive-success-20: #003a00;
+  --primitive-success-30: #005300;
+  --primitive-success-40: #006e00;
+  --primitive-success-50: #178a0f;
+  --primitive-success-60: #3aa52c;
+  --primitive-success-70: #56c145;
+  --primitive-success-80: #72de5e;
+  --primitive-success-90: #8dfb77;
+  --primitive-success-95: #caffb8;
+  --primitive-success-98: #edffe1;
+  --primitive-success-99: #f7ffee;
+  --primitive-success-100: #ffffff;
+  /* Palette: error */
+  --primitive-error-0: #000000;
+  --primitive-error-10: #410000;
+  --primitive-error-20: #690100;
+  --primitive-error-30: #930100;
+  --primitive-error-40: #c00100;
+  --primitive-error-50: #ef0000;
+  --primitive-error-60: #ff5540;
+  --primitive-error-70: #ff8a78;
+  --primitive-error-80: #ffb4a8;
+  --primitive-error-90: #ffdad4;
+  --primitive-error-95: #ffedea;
+  --primitive-error-98: #fff8f6;
+  --primitive-error-99: #fffbff;
+  --primitive-error-100: #ffffff;
+  /* Palette: warning */
+  --primitive-warning-0: #000000;
+  --primitive-warning-10: #2c1600;
+  --primitive-warning-20: #492900;
+  --primitive-warning-30: #683c00;
+  --primitive-warning-40: #8a5100;
+  --primitive-warning-50: #ac6700;
+  --primitive-warning-60: #cf7e0b;
+  --primitive-warning-70: #ef972c;
+  --primitive-warning-80: #ffb86d;
+  --primitive-warning-90: #ffdcbd;
+  --primitive-warning-95: #ffeee0;
+  --primitive-warning-98: #fff8f4;
+  --primitive-warning-99: #fffbff;
+  --primitive-warning-100: #ffffff;
+
+  /* ========================================================================
+     2. SEMANTIC COLOR ROLES (SOURCE OF TRUTH FOR UI IMPLEMENTATION)
+     Consume EXCLUSIVELY these variables across buttons, text, cards, borders.
+     ======================================================================== */
+  --color-primary: var(--primitive-primary-40);
+  --color-on-primary: var(--primitive-primary-100);
+  --color-primary-container: var(--primitive-primary-90);
+  --color-on-primary-container: var(--primitive-primary-30);
+  --color-secondary: var(--primitive-secondary-40);
+  --color-on-secondary: var(--primitive-secondary-100);
+  --color-secondary-contrainer: var(--primitive-secondary-90);
+  --color-on-secondary-contrainer: var(--primitive-secondary-30);
+  --color-tertiary: var(--primitive-tertiary-40);
+  --color-on-tertiary: var(--primitive-tertiary-100);
+  --color-tertiary-container: var(--primitive-tertiary-90);
+  --color-on-tertiary-container: var(--primitive-tertiary-30);
+  --color-error: var(--primitive-error-40);
+  --color-on-error: var(--primitive-error-100);
+  --color-error-container: var(--primitive-error-90);
+  --color-on-error-container: var(--primitive-error-30);
+  --color-success: var(--primitive-success-40);
+  --color-on-success: var(--primitive-success-100);
+  --color-success-container: var(--primitive-success-90);
+  --color-on-success-container: var(--primitive-success-30);
+  --color-surface: var(--primitive-neutral-98);
+  --color-on-surface: var(--primitive-neutral-10);
+  --color-surface-variant: var(--primitive-neutral-variant-90);
+  --color-on-surface-variant: var(--primitive-neutral-variant-30);
+  --color-surface-container-highest: var(--primitive-neutral-90);
+  --color-surface-container-high: var(--primitive-neutral-92);
+  --color-surface-container: var(--primitive-neutral-94);
+  --color-surface-container-low: var(--primitive-neutral-96);
+  --color-surface-container-lowest: var(--primitive-neutral-100);
+  --color-inverse-surface: var(--primitive-neutral-20);
+  --color-inverse-on-surface: var(--primitive-neutral-95);
+  --color-surface-tint: var(--primitive-primary-40);
+  --color-surface-tint-color: var(--primitive-primary-40);
+  --color-outline: var(--primitive-neutral-variant-50);
+  --color-outline-variant: var(--primitive-neutral-variant-80);
+  --color-primary-fixed: var(--primitive-primary-90);
+  --color-on-primary-fixed: var(--primitive-primary-10);
+  --color-primary-fixed-dim: var(--primitive-primary-80);
+  --color-on-primary-fixed-variant: var(--primitive-primary-30);
+  --color-inverse-primary: var(--primitive-primary-80);
+  --color-secondary-fixed: var(--primitive-secondary-90);
+  --color-on-secondary-fixed: var(--primitive-secondary-10);
+  --color-secondary-fixed-dim: var(--primitive-secondary-80);
+  --color-on-secondary-fixed-variant: var(--primitive-secondary-30);
+  --color-tertiary-fixed: var(--primitive-tertiary-90);
+  --color-on-tertiary-fixed: var(--primitive-tertiary-10);
+  --color-tertiary-fixed-dim: var(--primitive-tertiary-80);
+  --color-on-tertiary-fixed-variant: var(--primitive-tertiary-30);
+  --color-background: var(--primitive-neutral-98);
+  --color-on-background: var(--primitive-neutral-10);
+  --color-surface-bright: var(--primitive-neutral-98);
+  --color-surface-dim: var(--primitive-neutral-87);
+  --color-scrim: var(--primitive-neutral-0);
+  --color-shadow: var(--primitive-neutral-0);
+  --color-warning: var(--primitive-warning-40);
+  --color-on-warning: var(--primitive-warning-100);
+  --color-warning-container: var(--primitive-warning-90);
+  --color-on-warning-container: var(--primitive-warning-30);
+
+  /* ------------------------------------------------------------------------
+     3A. Primitive Spacing Scale (Internal foundation - DO NOT USE ON UI)
+     ------------------------------------------------------------------------ */
+  --primitive-spacing-0: 0px;
+  --primitive-spacing-2: 2px;
+  --primitive-spacing-4: 4px;
+  --primitive-spacing-6: 6px;
+  --primitive-spacing-8: 8px;
+  --primitive-spacing-10: 10px;
+  --primitive-spacing-12: 12px;
+  --primitive-spacing-14: 14px;
+  --primitive-spacing-16: 16px;
+  --primitive-spacing-20: 20px;
+  --primitive-spacing-24: 24px;
+  --primitive-spacing-32: 32px;
+  --primitive-spacing-36: 36px;
+  --primitive-spacing-40: 40px;
+  --primitive-spacing-48: 48px;
+  --primitive-spacing-56: 56px;
+  --primitive-spacing-64: 64px;
+  --primitive-spacing-72: 72px;
+  --primitive-spacing-80: 80px;
+  --primitive-spacing-100: 100px;
+
+  /* ========================================================================
+     3B. SEMANTIC SPACING (SOURCE OF TRUTH FOR UI IMPLEMENTATION)
+     Use these semantic variables for layout spacing, margins, and padding.
+     ======================================================================== */
+  --spacing-none: var(--primitive-spacing-0);
+  --spacing-3xs: var(--primitive-spacing-2);
+  --spacing-2xs: var(--primitive-spacing-4);
+  --spacing-xs: var(--primitive-spacing-6);
+  --spacing-sm: var(--primitive-spacing-8);
+  --spacing-ms: var(--primitive-spacing-12);
+  --spacing-md: var(--primitive-spacing-16);
+  --spacing-lg: var(--primitive-spacing-24);
+  --spacing-xl: var(--primitive-spacing-32);
+  --spacing-2xl: var(--primitive-spacing-40);
+  --spacing-3xl: var(--primitive-spacing-48);
+  --spacing-4xl: var(--primitive-spacing-56);
+  --spacing-5xl: var(--primitive-spacing-64);
+  --spacing-6xl: var(--primitive-spacing-72);
+  --spacing-7xl: var(--primitive-spacing-80);
+  --spacing-giant: var(--primitive-spacing-100);
+
+  /* ------------------------------------------------------------------------
+     4A. Primitive Corner Radius (Internal foundation - DO NOT USE ON UI)
+     ------------------------------------------------------------------------ */
+  --primitive-radius-0: 0;
+  --primitive-radius-4: 4px;
+  --primitive-radius-8: 8px;
+  --primitive-radius-12: 12px;
+  --primitive-radius-16: 16px;
+  --primitive-radius-24: 24px;
+  --primitive-radius-28: 28px;
+  --primitive-radius-999: 9999px;
+
+  /* ========================================================================
+     4B. SEMANTIC CORNER RADIUS (SOURCE OF TRUTH FOR UI IMPLEMENTATION)
+     Use these semantic variables for border-radius across UI components.
+     ======================================================================== */
+  --radius-none: var(--primitive-radius-0);
+  --radius-xs: var(--primitive-radius-4);
+  --radius-sm: var(--primitive-radius-8);
+  --radius-md: var(--primitive-radius-12);
+  --radius-lg: var(--primitive-radius-16);
+  --radius-xl: var(--primitive-radius-28);
+  --radius-full: var(--primitive-radius-999);
+
+  /* ========================================================================
+     5. ELEVATION & SHADOWS (SOURCE OF TRUTH FOR UI IMPLEMENTATION)
+     Derived from brand primary shadow curves. Use for surface elevations.
+     ======================================================================== */
+  --elevation-lvl-1: 0px 1px 2px 0px rgba(40, 107, 70, 0.302), 0px 1px 3px 1px rgba(40, 107, 70, 0.149);
+  --elevation-lvl-2: 0px 2px 6px 2px rgba(40, 107, 70, 0.149), 0px 1px 2px 0px rgba(40, 107, 70, 0.302);
+  --elevation-lvl-3: 0px 4px 8px 3px rgba(40, 107, 70, 0.149), 0px 1px 3px 0px rgba(40, 107, 70, 0.302);
+  --elevation-lvl-4: 0px 10px 14px 4px rgba(40, 107, 70, 0.059), 0px 6px 10px 0px rgba(40, 107, 70, 0.149);
+  --elevation-lvl-5: 0px 8px 26px 8px rgba(40, 107, 70, 0.051), 0px 10px 14px 0px rgba(40, 107, 70, 0.149);
+
+  /* ========================================================================
+     6. TYPOGRAPHY SYSTEM (SOURCE OF TRUTH FOR UI IMPLEMENTATION)
+     Standard 15-style typography scale with calculated line-heights.
+     ======================================================================== */
+  --typography-display-large-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-display-large-font-size: 57px;
+  --typography-display-large-font-weight: 600;
+  --typography-display-large-line-height: 68.4px;
+  --typography-display-large-letter-spacing: -2.85px;
+  --typography-display-medium-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-display-medium-font-size: 45px;
+  --typography-display-medium-font-weight: 600;
+  --typography-display-medium-line-height: 54px;
+  --typography-display-medium-letter-spacing: -2.25px;
+  --typography-display-small-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-display-small-font-size: 36px;
+  --typography-display-small-font-weight: 600;
+  --typography-display-small-line-height: 43.2px;
+  --typography-display-small-letter-spacing: -1.8px;
+  --typography-headline-large-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-headline-large-font-size: 32px;
+  --typography-headline-large-font-weight: 500;
+  --typography-headline-large-line-height: 44.8px;
+  --typography-headline-large-letter-spacing: -1.6px;
+  --typography-headline-medium-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-headline-medium-font-size: 28px;
+  --typography-headline-medium-font-weight: 500;
+  --typography-headline-medium-line-height: 39.2px;
+  --typography-headline-medium-letter-spacing: -1.4px;
+  --typography-headline-small-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-headline-small-font-size: 24px;
+  --typography-headline-small-font-weight: 500;
+  --typography-headline-small-line-height: 33.6px;
+  --typography-headline-small-letter-spacing: -1.2px;
+  --typography-title-large-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-title-large-font-size: 22px;
+  --typography-title-large-font-weight: 400;
+  --typography-title-large-line-height: 30.8px;
+  --typography-title-large-letter-spacing: -0.44px;
+  --typography-title-medium-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-title-medium-font-size: 16px;
+  --typography-title-medium-font-weight: 400;
+  --typography-title-medium-line-height: 22.4px;
+  --typography-title-medium-letter-spacing: -0.32px;
+  --typography-title-small-font-family: 'Plus Jakarta Sans', sans-serif;
+  --typography-title-small-font-size: 14px;
+  --typography-title-small-font-weight: 500;
+  --typography-title-small-line-height: 19.6px;
+  --typography-title-small-letter-spacing: -0.28px;
+  --typography-body-large-font-family: 'Geist', sans-serif;
+  --typography-body-large-font-size: 16px;
+  --typography-body-large-font-weight: 400;
+  --typography-body-large-line-height: 24px;
+  --typography-body-large-letter-spacing: -0.08px;
+  --typography-body-medium-font-family: 'Geist', sans-serif;
+  --typography-body-medium-font-size: 14px;
+  --typography-body-medium-font-weight: 400;
+  --typography-body-medium-line-height: 21px;
+  --typography-body-medium-letter-spacing: -0.07px;
+  --typography-body-small-font-family: 'Geist', sans-serif;
+  --typography-body-small-font-size: 12px;
+  --typography-body-small-font-weight: 400;
+  --typography-body-small-line-height: 18px;
+  --typography-body-small-letter-spacing: -0.06px;
+  --typography-label-large-font-family: 'Geist', sans-serif;
+  --typography-label-large-font-size: 14px;
+  --typography-label-large-font-weight: 500;
+  --typography-label-large-line-height: 21px;
+  --typography-label-large-letter-spacing: 0.014px;
+  --typography-label-medium-font-family: 'Geist', sans-serif;
+  --typography-label-medium-font-size: 12px;
+  --typography-label-medium-font-weight: 500;
+  --typography-label-medium-line-height: 18px;
+  --typography-label-medium-letter-spacing: 0.06px;
+  --typography-label-small-font-family: 'Geist', sans-serif;
+  --typography-label-small-font-size: 11px;
+  --typography-label-small-font-weight: 500;
+  --typography-label-small-line-height: 16.5px;
+  --typography-label-small-letter-spacing: 0.055px;
+
+}

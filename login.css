@@ -1,0 +1,337 @@
+/* ==========================================================================
+   Dwella Login Page Styles
+   Strict Design System Implementation
+   Zero raw hex/rgb values: all styling references tokens.css variables.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: var(--spacing-none);
+  padding: var(--spacing-none);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--typography-body-large-font-family);
+  font-size: var(--typography-body-large-font-size);
+  font-weight: var(--typography-body-large-font-weight);
+  line-height: var(--typography-body-large-line-height);
+  letter-spacing: var(--typography-body-large-letter-spacing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  -webkit-font-smoothing: antialiased;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* Card Container */
+.login-card {
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--elevation-lvl-2);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Header & Brand */
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-xs);
+}
+
+.brand-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.brand-title {
+  font-family: var(--typography-headline-medium-font-family);
+  font-size: var(--typography-headline-medium-font-size);
+  font-weight: var(--typography-headline-medium-font-weight);
+  line-height: var(--typography-headline-medium-line-height);
+  letter-spacing: var(--typography-headline-medium-letter-spacing);
+  color: var(--color-primary);
+}
+
+.brand-subtitle {
+  font-family: var(--typography-body-medium-font-family);
+  font-size: var(--typography-body-medium-font-size);
+  font-weight: var(--typography-body-medium-font-weight);
+  line-height: var(--typography-body-medium-line-height);
+  letter-spacing: var(--typography-body-medium-letter-spacing);
+  color: var(--color-on-surface-variant);
+}
+
+/* Banner Error */
+.banner-error {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  line-height: var(--typography-body-small-line-height);
+}
+
+.banner-error[hidden] {
+  display: none;
+}
+
+.error-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+  font-weight: var(--typography-label-large-font-weight);
+  font-size: var(--typography-label-small-font-size);
+  flex-shrink: 0;
+}
+
+/* Form Layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.field-label {
+  font-family: var(--typography-label-large-font-family);
+  font-size: var(--typography-label-large-font-size);
+  font-weight: var(--typography-label-large-font-weight);
+  line-height: var(--typography-label-large-line-height);
+  letter-spacing: var(--typography-label-large-letter-spacing);
+  color: var(--color-on-surface);
+}
+
+.text-link {
+  font-family: var(--typography-label-medium-font-family);
+  font-size: var(--typography-label-medium-font-size);
+  font-weight: var(--typography-label-medium-font-weight);
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.text-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* Input Fields */
+.field-input {
+  width: 100%;
+  font-family: var(--typography-body-large-font-family);
+  font-size: var(--typography-body-large-font-size);
+  font-weight: var(--typography-body-large-font-weight);
+  line-height: var(--typography-body-large-line-height);
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-input::placeholder {
+  color: var(--color-outline);
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-container);
+}
+
+.field-input.input-invalid {
+  border-color: var(--color-error);
+}
+
+.field-input.input-invalid:focus {
+  box-shadow: 0 0 0 3px var(--color-error-container);
+}
+
+/* Password wrapper & reveal toggle */
+.input-password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-password-wrapper .field-input {
+  padding-right: var(--spacing-2xl);
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: var(--spacing-sm);
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface-variant);
+  font-family: var(--typography-label-medium-font-family);
+  font-size: var(--typography-label-medium-font-size);
+  font-weight: var(--typography-label-medium-font-weight);
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  cursor: pointer;
+  border-radius: var(--radius-xs);
+}
+
+.toggle-password-btn:hover {
+  color: var(--color-primary);
+}
+
+.toggle-password-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+}
+
+/* Field Error Text */
+.field-error {
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  line-height: var(--typography-body-small-line-height);
+  color: var(--color-error);
+}
+
+.field-error[hidden] {
+  display: none;
+}
+
+/* Checkbox Auxiliary */
+.form-auxiliary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: var(--spacing-2xs);
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.checkbox-input {
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-text {
+  font-family: var(--typography-body-medium-font-family);
+  font-size: var(--typography-body-medium-font-size);
+  font-weight: var(--typography-body-medium-font-weight);
+  color: var(--color-on-surface-variant);
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: var(--spacing-xs);
+  width: 100%;
+  font-family: var(--typography-label-large-font-family);
+  font-size: var(--typography-label-large-font-size);
+  font-weight: var(--typography-label-large-font-weight);
+  line-height: var(--typography-label-large-line-height);
+  letter-spacing: var(--typography-label-large-letter-spacing);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  cursor: pointer;
+  box-shadow: var(--elevation-lvl-1);
+  transition: box-shadow 0.15s ease, background-color 0.15s ease, transform 0.05s ease;
+}
+
+.submit-btn:hover {
+  box-shadow: var(--elevation-lvl-2);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.submit-btn:focus-visible {
+  outline: 3px solid var(--color-primary-container);
+  outline-offset: 2px;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Footer Notice */
+.login-footer {
+  text-align: center;
+  border-top: 1px solid var(--color-outline-variant);
+  padding-top: var(--spacing-md);
+}
+
+.footer-note {
+  font-family: var(--typography-body-small-font-family);
+  font-size: var(--typography-body-small-font-size);
+  font-weight: var(--typography-body-small-font-weight);
+  line-height: var(--typography-body-small-line-height);
+  color: var(--color-on-surface-variant);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .login-card {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+  }
+}

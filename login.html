@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dwella — Resident & Admin Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-wrapper">
+    <section class="login-card" aria-labelledby="login-title">
+      <header class="brand-header">
+        <div class="brand-badge" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h1 id="login-title" class="brand-title">Dwella</h1>
+        <p class="brand-subtitle">Residential Estate Service Charge Portal</p>
+      </header>
+
+      <form id="login-form" class="login-form" novalidate>
+        <div id="general-error" class="banner-error" role="alert" aria-live="assertive" hidden>
+          <span class="error-icon" aria-hidden="true">!</span>
+          <span id="general-error-text"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="identifier" class="field-label">Email or House / Unit ID</label>
+          <input
+            type="text"
+            id="identifier"
+            name="identifier"
+            class="field-input"
+            placeholder="e.g. resident@dwella.ng or Block B, Unit 4"
+            autocomplete="username"
+            required
+            aria-describedby="identifier-error"
+          />
+          <p id="identifier-error" class="field-error" role="alert" hidden></p>
+        </div>
+
+        <div class="form-group">
+          <div class="label-row">
+            <label for="password" class="field-label">Password</label>
+            <a href="#forgot" id="forgot-password-link" class="text-link">Forgot password?</a>
+          </div>
+          <div class="input-password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="field-input"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+              aria-describedby="password-error"
+            />
+            <button
+              type="button"
+              id="toggle-password"
+              class="toggle-password-btn"
+              aria-label="Show password"
+              aria-pressed="false"
+            >
+              Show
+            </button>
+          </div>
+          <p id="password-error" class="field-error" role="alert" hidden></p>
+        </div>
+
+        <div class="form-auxiliary">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember-me" name="remember" class="checkbox-input" />
+            <span class="checkbox-text">Keep me signed in on this device</span>
+          </label>
+        </div>
+
+        <button type="submit" id="submit-btn" class="submit-btn">
+          Sign In
+        </button>
+      </form>
+
+      <footer class="login-footer">
+        <p class="footer-note">
+          Need an account? Contact your estate administrator or management committee.
+        </p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
