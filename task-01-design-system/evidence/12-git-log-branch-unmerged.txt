@@ -1,0 +1,29 @@
+=== STEP 1: CREATE AND SWITCH TO REGRESSION BRANCH ===
+PS C:\Users\gench\OneDrive\Desktop\ship and found Task> git checkout -b test/deliberate-regression
+Switched to a new branch 'test/deliberate-regression'
+
+=== STEP 2: COMMIT THE DELIBERATE TOKEN DECOUPLING ===
+PS C:\Users\gench\OneDrive\Desktop\ship and found Task> git commit -am "test(tokens): deliberately break primary token referencing to demonstrate regression"
+[test/deliberate-regression 71e09d2] test(tokens): deliberately break primary token referencing to demonstrate regression
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+
+=== STEP 3: SWITCH BACK TO MASTER ===
+PS C:\Users\gench\OneDrive\Desktop\ship and found Task> git checkout master
+Switched to branch 'master'
+
+=== STEP 4: DELETE REGRESSION BRANCH WITHOUT MERGING ===
+PS C:\Users\gench\OneDrive\Desktop\ship and found Task> git branch -D test/deliberate-regression
+Deleted branch test/deliberate-regression (was 71e09d2).
+
+=== STEP 5: PROOF VIA GIT LOG ON MASTER (Commit 71e09d2 is absent) ===
+PS C:\Users\gench\OneDrive\Desktop\ship and found Task> git log --graph --oneline
+* 907618f docs(task-01): add type scale, colour roles, shadows, divergences, defects, prompts, and interview defence
+* e7dd37b feat(design-system): initialize tokens, conversion script, tokens.css, and login UI
+
+=== STEP 6: PROOF VIA GIT REFLOG (Shows branch was deleted and unmerged) ===
+PS C:\Users\gench\OneDrive\Desktop\ship and found Task> git reflog -n 5
+907618f HEAD@{0}: checkout: moving from test/deliberate-regression to master
+71e09d2 HEAD@{1}: commit: test(tokens): deliberately break primary token referencing to demonstrate regression
+907618f HEAD@{2}: checkout: moving from master to test/deliberate-regression
+907618f HEAD@{3}: commit: docs(task-01): add type scale, colour roles, shadows, divergences, defects, prompts, and interview defence
+e7dd37b HEAD@{4}: commit (initial): feat(design-system): initialize tokens, conversion script, tokens.css, and login UI
